@@ -1,10 +1,10 @@
 package ie.tudublin;
 
 
-public class Note {
+public class Note extends PApplet 
+{
 
     private char note;
-
     private int duration; 
 
   // Create class constructor for Note class
@@ -12,11 +12,32 @@ public class Note {
 
   }
 
-  public static void main(String[] args) {
-    Note myObj = new Note(); // Create an object of class Main (This will call the constructor)
-    System.out.println(myObj.note); // Print the value of x
-  }
+public int getDuration()
+{
+    return duration;
 }
 
+public void setDuration(int duration)
+{
+    this.duration = duration;
+}
 
 }
+
+public char getNote()
+{
+    return note;
+}
+
+public void setNetoe(char note)
+{
+    this.note = note;
+}
+
+// toString() method
+@Override
+public String toString()
+{
+    return "Note [duration=" + duration + ", note=" + note +  "]";
+}
+
